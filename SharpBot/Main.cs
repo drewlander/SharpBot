@@ -33,6 +33,7 @@ using System.Collections.Generic;
 using SharpBot;
 using Meebey.SmartIrc4net;
 
+
 // This is an VERY basic example how your IRC application could be written
 // its mainly for showing how to use the API, this program just connects sends
 // a few message to a channel and waits for commands on the console
@@ -115,108 +116,17 @@ public class Test
     {
         Thread.CurrentThread.Name = "Main";
         var connect = new Connect();
-        // UTF-8 test
-//        irc.Encoding = System.Text.Encoding.UTF8;
-//        
-//        // wait time between messages, we can set this lower on own irc servers
-//        irc.SendDelay = 200;
-//        
-//        // we use channel sync, means we can use irc.GetChannel() and so on
-//        irc.ActiveChannelSyncing = true;
-        
-        // here we connect the events of the API to our written methods
-        // most have own event handler types, because they ship different data
+
         Client.OnQueryMessage += new IrcEventHandler(OnQueryMessage);
         Client.OnError += new ErrorEventHandler(OnError);
         Client.OnRawMessage += new IrcEventHandler(OnRawMessage);
 
-        //string[] serverlist;
-        // the server we want to connect to, could be also a simple string
-//        serverlist = new string[] {"irc.freenode.org"};
-//        int port = 6667;
-//        string channel = "#smartirc-test";
 		connect.ServerName="new.drewstud.com";
 		connect.Port=6667;
 		connect.DefaultChannel="#37tech";
 		connect.Init();
-//        try {
-//            // here we try to connect to the server and exceptions get handled
-//           // Client.Connect(serverlist, port);
-//        } catch (ConnectionException e) {
-//            // something went wrong, the reason will be shown
-//            System.Console.WriteLine("couldn't connect! Reason: "+e.Message);
-//            Exit();
-//        }
-//        
-//        try {
-//            // here we logon and register our nickname and so on 
-//            Client.Login("SmartIRC", "SmartIrc4net Test Bot");
-//            // join the channel
-//            Client.RfcJoin(channel);
-//            
-//            for (int i = 0; i < 3; i++) {
-//                // here we send just 3 different types of messages, 3 times for
-//                // testing the delay and flood protection (messagebuffer work)
-//                Client.SendMessage(SendType.Message, channel, "test message ("+i.ToString()+")");
-//                Client.SendMessage(SendType.Action, channel, "thinks this is cool ("+i.ToString()+")");
-//                Client.SendMessage(SendType.Notice, channel, "SmartIrc4net rocks ("+i.ToString()+")");
-//            }
-//            
-//            // spawn a new thread to read the stdin of the console, this we use
-//            // for reading IRC commands from the keyboard while the IRC connection
-//            // stays in its own thread
-//            new Thread(new ThreadStart(ReadCommands)).Start();
-//            
-//            // here we tell the IRC API to go into a receive mode, all events
-//            // will be triggered by _this_ thread (main thread in this case)
-//            // Listen() blocks by default, you can also use ListenOnce() if you
-//            // need that does one IRC operation and then returns, so you need then 
-//            // an own loop 
-//            Client.Listen();
-//            
-//            // when Listen() returns our IRC session is over, to be sure we call
-//            // disconnect manually
-//            Client.Disconnect();
-//        } catch (ConnectionException) {
-//            // this exception is handled because Disconnect() can throw a not
-//            // connected exception
-//            Exit();
-//        } catch (Exception e) {
-//            // this should not happen by just in case we handle it nicely
-//            System.Console.WriteLine("Error occurred! Message: "+e.Message);
-//            System.Console.WriteLine("Exception: "+e.StackTrace);
-//            Exit();
-//        }
     }
-    
-//    public static void ReadCommands()
-//    {
-//        // here we read the commands from the stdin and send it to the IRC API
-//        // WARNING, it uses WriteLine() means you need to enter RFC commands
-//        // like "JOIN #test" and then "PRIVMSG #test :hello to you"
-//        while (true) {
-//            string cmd = System.Console.ReadLine();
-//            if (cmd.StartsWith("/list")) {
-//                int pos = cmd.IndexOf(" ");
-//                string channel = null;
-//                if (pos != -1) {
-//                    channel = cmd.Substring(pos + 1);
-//                }
-//                
-//                IList<ChannelInfo> channelInfos = Client.GetChannelList(channel);
-//                Console.WriteLine("channel count: {0}", channelInfos.Count);
-//                foreach (ChannelInfo channelInfo in channelInfos) {
-//                    Console.WriteLine("channel: {0} user count: {1} topic: {2}",
-//                                      channelInfo.Channel,
-//                                      channelInfo.UserCount,
-//                                      channelInfo.Topic);
-//                }
-//            } else {
-//                Client.WriteLine(cmd);
-//            }
-//        }
-//    }
-    
+
     public static void Exit()
     {
         // we are done, lets exit...
