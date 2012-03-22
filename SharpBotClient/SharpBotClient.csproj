@@ -2,15 +2,15 @@
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B0F61F4C-8FEB-4F2B-ABC3-A92C09A7A25B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>SharpBot</RootNamespace>
-    <AssemblyName>SharpBot</AssemblyName>
+    <ProjectGuid>{95C8A316-14E1-4781-9867-0DF4040743D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SharpBotClient</RootNamespace>
+    <AssemblyName>SharpBotClient</AssemblyName>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -18,32 +18,26 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <Externalconsole>true</Externalconsole>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <Externalconsole>true</Externalconsole>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Meebey.SmartIrc4net">
       <HintPath>..\..\..\ircclient\smartirc4net-0.4.5.1\bin\Meebey.SmartIrc4net.dll</HintPath>
     </Reference>
-    <Reference Include="SharpBotClient">
-      <HintPath>..\SharpBotClient\bin\Debug\SharpBotClient.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Connect.cs" />
-    <Compile Include="ChannelMessageHandler.cs" />
+    <Compile Include="IHandleChannelMessages.cs" />
+    <Compile Include="SharpBotClient.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

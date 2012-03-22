@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
+using SharpBotClient;
 
 using Meebey.SmartIrc4net;
 namespace SharpBot
