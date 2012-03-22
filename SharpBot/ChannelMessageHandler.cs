@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using Meebey.SmartIrc4net;
 namespace SharpBot
 {
-	public class ChannelMessageHandler
+	public class ChannelMessageHandler : IHandleChannelMessages
 	{
 		private IrcClient client;
 		public ChannelMessageHandler (IrcClient client)
@@ -15,7 +15,6 @@ namespace SharpBot
 		}
 		public void HandleMessage(object sender, IrcEventArgs e)
 		{
-			//client.SendMessage(SendType.Message,"Handled your message {0}",e.Data.Message);
 			client.SendMessage(SendType.Message, e.Data.Channel,"Handled your message "+e.Data.Message);
 		}
 	}

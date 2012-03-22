@@ -41,6 +41,7 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Connect.cs" />
     <Compile Include="ChannelMessageHandler.cs" />
+    <Compile Include="IHandleChannelMessages.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

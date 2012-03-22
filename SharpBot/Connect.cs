@@ -10,7 +10,7 @@ namespace SharpBot
 	{
 		private static IrcClient client;
 		public delegate void OnChannelMessage(object sender, IrcEventArgs e);
-		private IList<OnChannelMessage> onChannelMessagesList;
+		private IList<IHandleChannelMessages> onChannelMessagesList;
 		public static IrcClient Client
 		{
 			get
@@ -40,7 +40,7 @@ namespace SharpBot
 	        
 	        // we use channel sync, means we can use irc.GetChannel() and so on
 	        Client.ActiveChannelSyncing = true;
-			onChannelMessagesList = new List<OnChannelMessage>();
+			onChannelMessagesList = new List<IHandleChannelMessages>();
 		}
 		
 			
@@ -59,7 +59,7 @@ namespace SharpBot
             Exit();
 			}
 		}
-		public void RegisterOnChannelMessage(OnChannelMessage obj)
+		public void RegisterOnChannelMessage(IHandleChannelMessages obj)
 		{
 			onChannelMessagesList.Add(obj);
 		}
@@ -114,10 +114,11 @@ namespace SharpBot
 		{
 			foreach(var call in onChannelMessagesList)
 			{
-				call(sender,e);
+				call.HandleMessage(sender,e);
 			}
 		}
-			public static void ReadCommands()
+		
+		public static void ReadCommands()
 	    {
 	        // here we read the commands from the stdin and send it to the IRC API
 	        // WARNING, it uses WriteLine() means you need to enter RFC commands
