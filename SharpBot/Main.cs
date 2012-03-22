@@ -116,7 +116,7 @@ public class Test
     {
         Thread.CurrentThread.Name = "Main";
         var connect = new Connect();
-		var chanmessage = new ChannelMessageHandler(Connect.Client);
+		IHandleChannelMessages chanmessage = new ChannelMessageHandler(Connect.Client);
 		connect.RegisterOnChannelMessage(chanmessage);
 //        Client.OnQueryMessage += new IrcEventHandler(OnQueryMessage);
 //        Client.OnError += new ErrorEventHandler(OnError);
