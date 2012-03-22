@@ -116,10 +116,12 @@ public class Test
     {
         Thread.CurrentThread.Name = "Main";
         var connect = new Connect();
-
-        Client.OnQueryMessage += new IrcEventHandler(OnQueryMessage);
-        Client.OnError += new ErrorEventHandler(OnError);
-        Client.OnRawMessage += new IrcEventHandler(OnRawMessage);
+		var chanmessage = new ChannelMessageHandler(Connect.Client);
+		connect.RegisterOnChannelMessage(chanmessage.HandleMessage);
+//        Client.OnQueryMessage += new IrcEventHandler(OnQueryMessage);
+//        Client.OnError += new ErrorEventHandler(OnError);
+//        Client.OnRawMessage += new IrcEventHandler(OnRawMessage);
+		
 
 		connect.ServerName="new.drewstud.com";
 		connect.Port=6667;
