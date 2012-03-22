@@ -20,6 +20,11 @@ namespace SharpBotClient
 				client = value;
 			}
 		}
+		
+		public static void SendChannelMessag(string channel, string message)
+		{
+			client.SendMessage(SendType.Message, channel,message);
+		}
 	}
 }
 
