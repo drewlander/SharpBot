@@ -131,8 +131,11 @@ namespace SharpBot
 	//        Client.OnRawMessage += new IrcEventHandler(OnRawMessage);
 			
 			RegisterAllHandleChannelMessage(connect);
-			connect.ServerName="new.drewstud.com";
+			string[] serverlist;
+			serverlist = new string[] {"new.drewstud.com"};
+			connect.ServerName= serverlist;
 			connect.Port=6667;
+			
 			connect.DefaultChannel="#37tech";
 			connect.Init();
 	    }

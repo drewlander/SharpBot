@@ -45,7 +45,8 @@ namespace TriviaBot
 //						// or you can pass the array of parameters...)
 					if(mi==null)
 					{
-						client.SendMessage(SendType.Message, e.Data.Channel,"mi is null! "+e.Data.Message);
+						//client.SendMessage(SendType.Message, e.Data.Channel,"mi is null! "+e.Data.Message);
+						SharpBotClient.SharpBotClient.SendChannelMessag(e.Data.Channel,"handled from client");
 					}
 					else
 					{

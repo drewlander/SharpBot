@@ -29,7 +29,7 @@ namespace SharpBot
 			}
 		}
 		
-		public string ServerName {get;set;}
+		public string[] ServerName {get;set;}
 		public int Port {get;set;}
 		public string DefaultChannel {get;set;}
 		
@@ -72,14 +72,6 @@ namespace SharpBot
 	            Client.Login("SmartIRC", "SmartIrc4net Test Bot");
 	            // join the channel
 	            Client.RfcJoin(DefaultChannel);
-	            
-	            for (int i = 0; i < 3; i++) {
-	                // here we send just 3 different types of messages, 3 times for
-	                // testing the delay and flood protection (messagebuffer work)
-//	                Client.SendMessage(SendType.Message, DefaultChannel, "test message ("+i.ToString()+")");
-//	                Client.SendMessage(SendType.Action, DefaultChannel, "thinks this is cool ("+i.ToString()+")");
-//	                Client.SendMessage(SendType.Notice, DefaultChannel, "SmartIrc4net rocks ("+i.ToString()+")");
-            	}
             
 	            // spawn a new thread to read the stdin of the console, this we use
 	            // for reading IRC commands from the keyboard while the IRC connection
