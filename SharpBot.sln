@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriviaBot", "TriviaBot\Triv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpBotClient", "SharpBotClient\SharpBotClient.csproj", "{95C8A316-14E1-4781-9867-0DF4040743D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordScamberBot", "WordScamberBot\WordScamberBot.csproj", "{53A74E1C-4DA9-4A49-A825-8D806E000A9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -17,6 +19,10 @@ Global
 		{0CCC8281-6CD2-4A25-8C6C-CA0BA0336383}.Debug|x86.Build.0 = Debug|Any CPU
 		{0CCC8281-6CD2-4A25-8C6C-CA0BA0336383}.Release|x86.ActiveCfg = Release|Any CPU
 		{0CCC8281-6CD2-4A25-8C6C-CA0BA0336383}.Release|x86.Build.0 = Release|Any CPU
+		{53A74E1C-4DA9-4A49-A825-8D806E000A9F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{53A74E1C-4DA9-4A49-A825-8D806E000A9F}.Debug|x86.Build.0 = Debug|Any CPU
+		{53A74E1C-4DA9-4A49-A825-8D806E000A9F}.Release|x86.ActiveCfg = Release|Any CPU
+		{53A74E1C-4DA9-4A49-A825-8D806E000A9F}.Release|x86.Build.0 = Release|Any CPU
 		{95C8A316-14E1-4781-9867-0DF4040743D3}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{95C8A316-14E1-4781-9867-0DF4040743D3}.Debug|x86.Build.0 = Debug|Any CPU
 		{95C8A316-14E1-4781-9867-0DF4040743D3}.Release|x86.ActiveCfg = Release|Any CPU

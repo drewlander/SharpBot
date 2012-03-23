@@ -5,36 +5,41 @@ using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace TriviaBot
+namespace WordScamblerBot
 {
-	public class Trivia : IHandleChannelMessages
+	public class WordScrambler : IHandleChannelMessages
 	{
 		private IrcClient client;
-		//private bool isRunning; 
+		private bool isRunning; 
+		private int previousGuesses;
 		private IDictionary<string,string> regexDictionary;
 		private Regex regex;
 		private IrcEventArgs eargs;
-		public Trivia (IrcClient client)
+		public WordScrambler (IrcClient client)
 		{
 			this.client = client;
 		}
 		public void HandleMessage(object sender, IrcEventArgs e)
 		{
 			this.eargs = e;
-//			client.SendMessage(SendType.Message, e.Data.Channel,"Handled your message From The dll! "+e.Data.Message);
-//			client.SendMessage(SendType.Message, e.Data.Channel,"Handled your message From The dll agaaa! "+e.Data.Message);
+			//client.SendMessage(SendType.Message, e.Data.Channel,"Handled your message From The dll! "+e.Data.Message);
+			//client.SendMessage(SendType.Message, e.Data.Channel,"Handled your message From The dll agaaa! "+e.Data.Message);
 			initRegexDict();
 			this.ExecuteMethodFromRegex(eargs);
 			
 		}
 		public void ExecuteMethodFromRegex(IrcEventArgs e)
 		{
+			if(isRunning==true)
+			{
+				SendUnscramble(e);
+			}
 			foreach(KeyValuePair<string,string> pair in regexDictionary)
 			{
 				regex = new Regex(pair.Key);
 				if(regex.IsMatch(e.Data.Message))
 				{
-					string methodName = "help";
+					string methodName = pair.Value;
 
 						//Get the method information using the method info class
 						MethodInfo mi = this.GetType().GetMethod(methodName);
@@ -56,17 +61,44 @@ namespace TriviaBot
 				}
 			}
 		}
-		
 		public void help(IrcEventArgs e)
 		{
 			client.SendMessage(SendType.Message, e.Data.Channel,"No help for you!  "+e.Data.From);
+		}
+		
+		public void unscramble(IrcEventArgs e)
+		{
+			if(this.isRunning==false)
+			{
+				isRunning=true;
+				previousGuesses=0;
+				client.SendMessage(SendType.Message,e.Data.Channel,"Unscramble This word: yppah");
+			}
+			//SendUnscramble(e);
+			
+		}
+		
+		public void SendUnscramble(IrcEventArgs e)
+		{
+
+				if(string.Compare(e.Data.Message,"happy")==0)
+				{
+					client.SendMessage(SendType.Message,e.Data.Channel,"You got it right! " + e.Data.From);
+					isRunning=false;
+				}
+				else
+				{
+					client.SendMessage(SendType.Message,e.Data.Channel,"Incorrect sir "+e.Data.From);
+					previousGuesses++;
+				}
+			
 		}
 		private void initRegexDict()
 		{
 			regexDictionary = new Dictionary<string,string>();
 			regexDictionary.Add(@"!help","help");
+			regexDictionary.Add(@"!word","unscramble");
 		}
-		
 	}
 }
 
