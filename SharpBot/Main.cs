@@ -62,7 +62,7 @@ namespace SharpBot
 	        Thread.CurrentThread.Name = "Main";
 			
 	        var connect = new Connect();
-	        Client.OnError += new ErrorEventHandler(OnError);
+	        Client.OnError += new Meebey.SmartIrc4net.ErrorEventHandler(OnError);
 
 			RegisterAllHandleChannelMessage(connect);
 			string[] serverlist;

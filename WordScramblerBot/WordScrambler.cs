@@ -7,7 +7,7 @@ using System.Reflection;
 using System.IO;
 using System.Data.Linq;
 
-namespace WordScamblerBot
+namespace WordScramblerBot
 {
 	public class WordScrambler : IHandleChannelMessages
 	{
@@ -81,7 +81,14 @@ namespace WordScamblerBot
 				currentWord = list[x.Next(0,this.list.Count)];
 				client.SendMessage(SendType.Message,e.Data.Channel,"Unscramble This word: " + RandomizeWord(currentWord));
 			}
-			
+			else if(this.isRunning==true)
+			{
+				if(e.Data.Message.Contains("Igiveup"))
+				{
+					this.isRunning=false;
+					client.SendMessage(SendType.Message,e.Data.Channel,"The correct answer is: " + currentWord);
+				}
+			}
 		}
 		
 		public void SendUnscramble(IrcEventArgs e)

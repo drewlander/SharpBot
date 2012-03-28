@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{53A74E1C-4DA9-4A49-A825-8D806E000A9F}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WordScamberBot</RootNamespace>
-    <AssemblyName>WordScamberBot</AssemblyName>
+    <RootNamespace>WordScramblerBot</RootNamespace>
+    <AssemblyName>WordScramblerBot</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,8 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="WordScramber.cs" />
     <Compile Include="WordScramblerBotTests.cs" />
+    <Compile Include="WordScrambler.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

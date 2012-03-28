@@ -1,20 +1,34 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WordScamberBot/WordScramber.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SharpBot/Main.cs">
     <Files>
-      <File FileName="SharpBot/Main.cs" Line="76" Column="3" />
-      <File FileName="SharpBot/Connect.cs" Line="25" Column="5" />
-      <File FileName="SharpBot/ChannelMessageHandler.cs" Line="10" Column="61" />
-      <File FileName="TriviaBot/Trivia.cs" Line="25" Column="118" />
-      <File FileName="SharpBotClient/SharpBotClient.cs" Line="24" Column="41" />
+      <File FileName="SharpBot/Main.cs" Line="85" Column="1" />
+      <File FileName="SharpBot/Connect.cs" Line="1" Column="1" />
+      <File FileName="SharpBot/ChannelMessageHandler.cs" Line="1" Column="1" />
+      <File FileName="TriviaBot/Trivia.cs" Line="1" Column="1" />
       <File FileName="SharpBotClient/IHandleChannelMessages.cs" Line="1" Column="1" />
-      <File FileName="SharpBot/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="WordScamberBot/WordScramber.cs" Line="35" Column="19" />
+      <File FileName="SharpBotClient/SharpBotClient.cs" Line="26" Column="58" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="SharpBot" expanded="True" />
+          <Node name="SharpBotClient" expanded="True" />
+          <Node name="WordScramblerBot" expanded="True" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/home/tomjones/Projects/SharpBot/SharpBot/Main.cs" line="85" />
+      <Breakpoint file="/home/tomjones/Projects/SharpBot/WordScamberBot/WordScramber.cs" line="103" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

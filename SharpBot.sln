@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriviaBot", "TriviaBot\Triv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpBotClient", "SharpBotClient\SharpBotClient.csproj", "{95C8A316-14E1-4781-9867-0DF4040743D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordScamberBot", "WordScamberBot\WordScamberBot.csproj", "{53A74E1C-4DA9-4A49-A825-8D806E000A9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordScramblerBot", "WordScramblerBot\WordScramblerBot.csproj", "{53A74E1C-4DA9-4A49-A825-8D806E000A9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
