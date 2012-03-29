@@ -21,8 +21,8 @@ namespace TriviaBot
 		public void HandleMessage(object sender, IrcEventArgs e)
 		{
 			this.eargs = e;
-			client.SendMessage(SendType.Message, e.Data.Channel,"Handled your message From The dll! "+e.Data.Message);
-			client.SendMessage(SendType.Message, e.Data.Channel,"Handled your message From The dll agaaa! "+e.Data.Message);
+//			client.SendMessage(SendType.Message, e.Data.Channel,"Handled your message From The dll! "+e.Data.Message);
+//			client.SendMessage(SendType.Message, e.Data.Channel,"Handled your message From The dll agaaa! "+e.Data.Message);
 			initRegexDict();
 			this.ExecuteMethodFromRegex(eargs);
 			
@@ -45,7 +45,8 @@ namespace TriviaBot
 //						// or you can pass the array of parameters...)
 					if(mi==null)
 					{
-						client.SendMessage(SendType.Message, e.Data.Channel,"mi is null! "+e.Data.Message);
+						//client.SendMessage(SendType.Message, e.Data.Channel,"mi is null! "+e.Data.Message);
+						SharpBotClient.SharpBotClient.SendChannelMessag(e.Data.Channel,"handled from client");
 					}
 					else
 					{

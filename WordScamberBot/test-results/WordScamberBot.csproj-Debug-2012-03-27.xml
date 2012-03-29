@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2012-03-27T14:59:55</TestDate>
+      <Status>Ignored</Status>
+      <TotalFailures>0</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+      <Message>Has no TestFixtures</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2012-03-27T15:00:01</TestDate>
+      <Status>Ignored</Status>
+      <TotalFailures>0</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+      <Message>Has no TestFixtures</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2012-03-27T15:00:08</TestDate>
+      <Status>Ignored</Status>
+      <TotalFailures>0</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+      <Message>Has no TestFixtures</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2012-03-27T15:00:21</TestDate>
+      <Status>Ignored</Status>
+      <TotalFailures>0</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+      <Message>Has no TestFixtures</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="WordScamberBot">
+      <Tests>
+        <TestRecord Name="WordScramblerBotTests">
+          <Tests>
+            <TestRecord Name="TestRandomWord">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2012-03-27T15:01:46</TestDate>
+                  <Status>Success</Status>
+                  <TotalFailures>0</TotalFailures>
+                  <TotalSuccess>1</TotalSuccess>
+                  <TotalIgnored>0</TotalIgnored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                  <ConsoleOutput>sett
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>
