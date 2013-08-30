@@ -1,6 +1,6 @@
 using System;
 using NUnit;
-using NUnit.Core;
+//using NUnit.Core;
 using NUnit.Framework;
 using WordScramblerBot;
 using SharpBotClient;

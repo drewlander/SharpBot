@@ -66,7 +66,7 @@ namespace SharpBot
 
 			RegisterAllHandleChannelMessage(connect);
 			string[] serverlist;
-			serverlist = new string[] {"new.drewstud.com"};
+			serverlist = new string[] {"irc.freenode.net"};
 			connect.ServerName= serverlist;
 			connect.Port=6667;
 			

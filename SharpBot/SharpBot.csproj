@@ -32,11 +32,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Meebey.SmartIrc4net">
-      <HintPath>..\..\..\ircclient\smartirc4net-0.4.5.1\bin\Meebey.SmartIrc4net.dll</HintPath>
-    </Reference>
     <Reference Include="SharpBotClient">
       <HintPath>..\SharpBotClient\bin\Debug\SharpBotClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Meebey.SmartIrc4net">
+      <HintPath>..\Meebey.SmartIrc4net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

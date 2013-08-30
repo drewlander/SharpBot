@@ -1,0 +1,5 @@
+C:\Users\Administrator\SharpBot\SharpBotClient\bin\Debug\SharpBotClient.dll
+C:\Users\Administrator\SharpBot\SharpBotClient\bin\Debug\SharpBotClient.pdb
+C:\Users\Administrator\SharpBot\SharpBotClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\SharpBot\SharpBotClient\obj\Debug\SharpBotClient.dll
+C:\Users\Administrator\SharpBot\SharpBotClient\obj\Debug\SharpBotClient.pdb

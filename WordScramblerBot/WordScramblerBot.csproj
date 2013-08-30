@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,6 +9,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>WordScramblerBot</RootNamespace>
     <AssemblyName>WordScramblerBot</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,23 +39,20 @@
       <HintPath>..\SharpBotClient\bin\Debug\SharpBotClient.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Linq" />
-    <Reference Include="nunit.core">
-      <HintPath>..\..\..\..\..\usr\lib64\mono\4.0\nunit.core.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.mocks">
-      <HintPath>..\..\..\..\..\usr\lib64\mono\4.0\nunit.mocks.dll</HintPath>
+    <Reference Include="Moq">
+      <HintPath>..\..\Downloads\Moq.4.0.10827\NET35\Moq.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>..\..\..\..\..\usr\lib64\mono\4.0\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Moq">
-      <HintPath>..\..\..\Downloads\Moq.4.0.10827\NET40\Moq.dll</HintPath>
+      <HintPath>..\..\Downloads\NUnit-2.6.1\bin\nunit.framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="WordScramblerBotTests.cs" />
     <Compile Include="WordScrambler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

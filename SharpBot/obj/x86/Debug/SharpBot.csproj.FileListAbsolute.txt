@@ -1,0 +1,7 @@
+C:\Users\Administrator\SharpBot\SharpBot\bin\Debug\SharpBot.exe
+C:\Users\Administrator\SharpBot\SharpBot\bin\Debug\SharpBot.pdb
+C:\Users\Administrator\SharpBot\SharpBot\bin\Debug\SharpBotClient.dll
+C:\Users\Administrator\SharpBot\SharpBot\bin\Debug\SharpBotClient.pdb
+C:\Users\Administrator\SharpBot\SharpBot\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\SharpBot\SharpBot\obj\x86\Debug\SharpBot.exe
+C:\Users\Administrator\SharpBot\SharpBot\obj\x86\Debug\SharpBot.pdb

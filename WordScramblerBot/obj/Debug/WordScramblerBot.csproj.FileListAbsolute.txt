@@ -1,0 +1,11 @@
+C:\Users\Administrator\SharpBot\WordScramblerBot\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\SharpBot\WordScramblerBot\bin\Debug\WordScramblerBot.dll
+C:\Users\Administrator\SharpBot\WordScramblerBot\bin\Debug\WordScramblerBot.pdb
+C:\Users\Administrator\SharpBot\WordScramblerBot\bin\Debug\Meebey.SmartIrc4net.dll
+C:\Users\Administrator\SharpBot\WordScramblerBot\bin\Debug\nunit.framework.dll
+C:\Users\Administrator\SharpBot\WordScramblerBot\bin\Debug\nunit.mocks.dll
+C:\Users\Administrator\SharpBot\WordScramblerBot\bin\Debug\SharpBotClient.dll
+C:\Users\Administrator\SharpBot\WordScramblerBot\bin\Debug\nunit.framework.xml
+C:\Users\Administrator\SharpBot\WordScramblerBot\bin\Debug\SharpBotClient.pdb
+C:\Users\Administrator\SharpBot\WordScramblerBot\obj\Debug\WordScramblerBot.dll
+C:\Users\Administrator\SharpBot\WordScramblerBot\obj\Debug\WordScramblerBot.pdb

@@ -1,0 +1,8 @@
+C:\Users\Administrator\SharpBot\TriviaBot\bin\Debug\TriviaBot.dll
+C:\Users\Administrator\SharpBot\TriviaBot\bin\Debug\TriviaBot.pdb
+C:\Users\Administrator\SharpBot\TriviaBot\bin\Debug\Meebey.SmartIrc4net.dll
+C:\Users\Administrator\SharpBot\TriviaBot\bin\Debug\SharpBotClient.dll
+C:\Users\Administrator\SharpBot\TriviaBot\bin\Debug\SharpBotClient.pdb
+C:\Users\Administrator\SharpBot\TriviaBot\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\SharpBot\TriviaBot\obj\Debug\TriviaBot.dll
+C:\Users\Administrator\SharpBot\TriviaBot\obj\Debug\TriviaBot.pdb
